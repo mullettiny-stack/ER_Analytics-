@@ -1,0 +1,77 @@
+version: 2
+
+models:
+  - name: int_er_analytic
+    description:
+      Intermediate model for the ER Analytics healthcare dataset. Selects the standardized staging fields required for readmission analysis, hospital stay analysis, prior healthcare utilization,and hospital resource utilization.
+    columns:
+      - name: id
+        description: Unique identifier for each record.
+        data_tests:
+          - unique
+          - not_null
+
+      - name: age
+        description: Age category of the patient.
+
+      - name: readmitted
+        description: Readmission status recorded for the encounter.
+        data_tests:
+          - not_null
+
+      - name: time_in_hospital
+        description: Number of days spent in the hospital.
+        data_tests:
+          - not_null
+
+      - name: n_emergency
+        description: Number of emergency visits before the hospital stay.
+        data_tests:
+          - not_null
+
+      - name: n_inpatient
+        description: Number of inpatient visits before the hospital stay.
+        data_tests:
+          - not_null
+
+      - name: n_outpatient
+        description: Number of outpatient visits before the hospital stay.
+
+      - name: n_medications
+        description: Number of medications administered during the hospital stay.
+        data_tests:
+          - not_null
+
+      - name: n_procedures
+        description: Number of procedures performed during the hospital stay.
+        data_tests:
+          - not_null
+
+      - name: n_lab_procedures
+        description: Number of laboratory procedures performed during the hospital stay.
+        data_tests:
+          - not_null
+
+      - name: diabetes_med
+        description: Indicates whether diabetes medication was prescribed.
+
+      - name: change
+        description: Indicates whether diabetes medication was changed.
+
+      - name: a1ctest
+        description: Indicates the recorded A1C test result category.
+
+      - name: glucose_test
+        description: Indicates the recorded glucose serum test result category.
+
+      - name: diag_1
+        description: Primary diagnosis code.
+
+      - name: diag_2
+        description: Secondary diagnosis code.
+
+      - name: diag_3
+        description: Additional secondary diagnosis code.
+
+      - name: medical_specialty
+        description: Medical specialty of the admitting physician.

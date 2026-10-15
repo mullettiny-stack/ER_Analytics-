@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: mart_readmission_analysis
+    description: >
+      An analytical mart showing the number and percentage of hospital
+      records in each readmission category.
+
+    columns:
+      - name: readmitted
+        description: Readmission category recorded for each hospital record.
+        data_tests:
+          - not_null
+
+      - name: record_count
+        description: Number of records belonging to each readmission category.
+        data_tests:
+          - not_null
+
+      - name: percentage_of_records
+        description: Percentage of all records belonging to each readmission category.
+        data_tests:
+          - not_null

@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: mart_stay_by_readmission
+    description: >
+      Compares the average and median length of hospital stay
+      across readmission categories.
+
+    columns:
+      - name: readmitted
+        description: Readmission category recorded for each hospital record.
+        data_tests:
+          - not_null
+
+      - name: record_count
+        description: Number of hospital records in each category.
+        data_tests:
+          - not_null
+
+      - name: avg_days_in_hospital
+        description: Average number of days spent in hospital.
+        data_tests:
+          - not_null
+
+      - name: median_days_in_hospital
+        description: Median number of days spent in hospital.
+        data_tests:
+          - not_null

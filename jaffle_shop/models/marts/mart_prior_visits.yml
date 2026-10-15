@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: mart_prior_visits
+    description: >
+      Analyzes the relationship between previous healthcare visits
+      and readmission categories.
+
+    columns:
+      - name: readmitted
+        description: Readmission category recorded for each hospital record.
+        data_tests:
+          - not_null
+
+      - name: record_count
+        description: Number of records in each readmission category.
+        data_tests:
+          - not_null
+
+      - name: avg_prior_emergency_visits
+        description: Average number of emergency visits before hospitalization.
+        data_tests:
+          - not_null
+
+      - name: avg_prior_inpatient_visits
+        description: Average number of inpatient visits before hospitalization.
+        data_tests:
+          - not_null
+
+      - name: avg_prior_outpatient_visits
+        description: Average number of outpatient visits before hospitalization.
+        data_tests:
+          - not_null

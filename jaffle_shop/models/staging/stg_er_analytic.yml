@@ -1,0 +1,91 @@
+version: 2
+
+models:
+  - name: stg_er_analytic
+    description: "Staging model that standardizes and documents the ER Analytics healthcare dataset."
+
+    columns:
+      - name: id
+        description: "Unique identifier for each record."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: age
+        description: "Age category of the patient."
+        data_tests:
+          - not_null
+
+      - name: change
+        description: "Indicates whether the patient's diabetes medication was changed."
+        data_tests:
+          - not_null
+
+      - name: diag_1
+        description: "Primary diagnosis code."
+        data_tests:
+          - not_null
+
+      - name: diag_2
+        description: "Secondary diagnosis code."
+
+      - name: diag_3
+        description: "Additional secondary diagnosis code."
+
+      - name: a1ctest
+        description: "Indicates whether the patient's A1C test result was high, normal, or not performed."
+        data_tests:
+          - not_null
+
+      - name: readmitted
+        description: "Indicates the patient's readmission status."
+        data_tests:
+          - not_null
+
+      - name: n_emergency
+        description: "Number of emergency visits in the year before the hospital stay."
+        data_tests:
+          - not_null
+
+      - name: n_inpatient
+        description: "Number of inpatient visits in the year before the hospital stay."
+        data_tests:
+          - not_null
+
+      - name: diabetes_med
+        description: "Indicates whether diabetes medication was prescribed."
+        data_tests:
+          - not_null
+
+      - name: glucose_test
+        description: "Indicates whether the glucose serum result was high, normal, or the test was not performed."
+        data_tests:
+          - not_null
+
+      - name: n_outpatient
+        description: "Number of outpatient visits in the year before the hospital stay."
+        data_tests:
+          - not_null
+
+      - name: n_procedures
+        description: "Number of procedures performed during the hospital stay."
+        data_tests:
+          - not_null
+
+      - name: n_medications
+        description: "Number of medications administered during the hospital stay."
+        data_tests:
+          - not_null
+
+      - name: n_lab_procedures
+        description: "Number of laboratory procedures performed during the hospital stay."
+        data_tests:
+          - not_null
+
+      - name: time_in_hospital
+        description: "Number of days spent in the hospital."
+        data_tests:
+          - not_null
+
+      - name: medical_specialty
+        description: "Medical specialty of the admitting physician."

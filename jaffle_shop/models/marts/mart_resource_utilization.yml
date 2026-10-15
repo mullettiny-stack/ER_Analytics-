@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: mart_resource_utilization
+    description: >
+      Compares average medication, procedure, and laboratory
+      utilization across readmission categories.
+
+    columns:
+      - name: readmitted
+        description: Readmission category.
+
+      - name: record_count
+        description: Number of records in each readmission category.
+        data_tests:
+          - not_null
+
+      - name: avg_medications
+        description: Average number of medications per record.
+        data_tests:
+          - not_null
+
+      - name: avg_procedures
+        description: Average number of procedures per record.
+        data_tests:
+          - not_null
+
+      - name: avg_lab_procedures
+        description: Average number of laboratory procedures per record.
+        data_tests:
+          - not_null

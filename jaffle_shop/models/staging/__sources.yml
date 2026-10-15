@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: ecom
+    database: ER_DB
+    schema: PUBLIC
+    tables:
+      - name: er_analytic
